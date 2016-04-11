@@ -14,7 +14,7 @@ from django.shortcuts import redirect
 def home(request):
 
     '''request.session.set_test_cookie()'''
-    category_list = Category.objects.order_by('-likes')[:5]
+    category_list = Category.objects.order_by('-likes')[:50]
     #page_list = Page.objects.order_by('views')[:5]
     roro = " I will never give up and I will do my best to be successful person"
  #   context = {"categories":category_list,'pages': page_list}

@@ -1,0 +1,13 @@
+h2 {
+
+    color:blue;
+}
+
+body {
+
+    background:url("images/background.gif");
+    background-size:cover;
+    background-repeat: no-repeat;
+    padding-left:40px;
+}
+</body>

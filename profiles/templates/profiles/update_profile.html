@@ -1,0 +1,25 @@
+
+
+
+<h1>Update your profile : {{ request.user }}</h1>
+<form action = "/profiles/your_profile/" enctype="multipart/form-data" method = 'post'>	
+
+	{% csrf_token %}
+
+	<label>
+       Bio :
+
+	</label></br>
+	{{ form.bio }}
+
+
+	<label>
+       Picture :
+
+	</label></br>
+
+	{{ form.picture }}
+
+	<button type="submit">Submit</button>
+
+</form>

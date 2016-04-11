@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends "_layouts/base.html" %}
+
+
+{% block page_title %} {{ post.title }} {% endblock %}
+
+{% block page_content %}
+
+<h1>{{ post.title }}</h1>
+
+{{ post.content }}
+
+  {{ Post.created_at }}
+
+<p>{{ post.updated_at }}</p>
+
+{% endblock %}

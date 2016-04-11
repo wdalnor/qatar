@@ -1,0 +1,33 @@
+{% extends "_layouts/base.html" %}
+
+
+{% block page_content %}
+
+<a href="/blog/your-name">Add New Post</a></li>
+
+<h3>Welcome to Purchase Department:</h3>
+<ul>
+    {% for post in post_list %}
+    
+    <li><a href="/blog/detail/{{ post.slug }}">{{ post.title }}</a></li>
+    
+       <br> {{ post.content }} </br>
+       <br> <h4> created by :{{  post.author }}<h4><br>
+      <h4>{{ post.created_at }}<h4>
+  
+    {% empty %}
+    {% comment %} this is a test comment for the comment tag usage {% endcomment %}
+    <li>sorry, no posts yet. check back soon</li>
+
+    {% endfor %}
+    
+</ul>
+
+       <form action="/search/" method="get">
+        <input type="text" name="q">
+        <input type="submit" value="Search">
+    </form>
+
+{% endblock %}
+
+

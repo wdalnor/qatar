@@ -1,0 +1,40 @@
+{% extends "raango/base.html" %}
+<!DOCTYPE html>
+
+
+<html>
+    <head>
+        <title>Rango</title>
+
+    </head>
+    <body>
+{% block content %}
+        <h1>Register with Purchase Dep</h1>
+
+
+        {% if registerd %}
+
+        Rango says : <strog> thanks you for registration </strong>
+        <a href="/rango/">Return to the home page</a></br >
+        {% else %}
+
+        Rngo says: <strong> register here </strong>
+        <form id="user_form" method="post" action="/rango/register/" enctype="multipart/form-data">
+
+        {% csrf_token %}
+
+
+        {{ user_form.as_p }}
+        {{ profile_form.as_p }}
+
+        <input type = "submit" name="submit" value = "Register" />
+        </form>
+
+
+        {% endif %}
+{% endblock %}
+
+    </body>
+
+
+</html>

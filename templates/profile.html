@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<link rel='stylesheet' href='{% static "profiles/main.css" %}'/>
+{% block content %} 
+	<h1> Hello: {{ user.username }} </h1>
+
+	<h1>{{ user.email }}</h1>
+	
+	</head>
+	<body>
+
+		<h1>{{ aboutme }}</h1>
+	</body>.
+{% endblock %}
+</html>

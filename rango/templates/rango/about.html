@@ -1,0 +1,22 @@
+{% extends "raango/base.html" %}
+<! DOCTYPE html>
+
+<html>
+<body>
+	{% block content %}
+<title>>this is all about us</title>
+{% if user.is_authenticated %}
+<h2>Welcome Back : {{ request.user }} 
+	{% else %}
+	<h2> Your are welcome my freind </h2>
+<h1>hello world</h1>
+{% endif %}
+
+<button onClick="alert('You clicked the button using Javascript.');">
+       Click Me - I run Javascript
+</button></br>
+
+<button id="about-btn"> Click Me - I'm Javascript on Speed</button></br>
+
+<div id="msg">Hello</div>
+{% endblock %}

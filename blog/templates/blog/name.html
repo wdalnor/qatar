@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends "_layouts/base.html" %}
+
+{% block page_title %} {{ post.title }} {% endblock %}
+
+{% block page_content %}
+
+<form method= 'POST' action=''>
+
+    {% csrf_token %}
+
+    {{ form.as_p }}
+  
+  
+
+<br><input type="submit" value="ok" /></br>
+
+
+<a href="/blog/">Previous</a></li>
+
+{% endblock %}

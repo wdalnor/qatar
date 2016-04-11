@@ -1,0 +1,10 @@
+from django.conf.urls import url
+from . import views
+
+urlpatterns = [
+    url(r'^$', views.PostListView.as_view(), name="blog list"),
+    url(r'^detail/(?P<slug>[-\w]+)/$', views.PostDetailView.as_view(), name="post detail"),
+    url(r'^your-name/$', views.myname, name="your-name"),
+    url(r'^contact/$', views.contact_form, name="contact"),
+]
+

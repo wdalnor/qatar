@@ -1,0 +1,17 @@
+{% load crispy_forms_tags %}
+
+<h1>{{ title }}</h1>
+{% if conform_message %}
+<p> {{ conform_message }} </p>
+{% endif%}
+
+{% if form %}
+<form method= 'POST' action=''> {% csrf_token %}
+
+    {{ form|crispy }}
+
+<input type = "submit" value = "Submit"/>
+
+
+</form>
+{% endif%}

@@ -1,0 +1,58 @@
+{% extends "raango/base.html" %}
+
+<!DOCTYPE html>
+
+<html>
+
+    
+        <div class="panel panel-primary">
+        <div class="panel panel-heading">
+           <h3 class="panel-title">Categories</h1
+        <
+   <body>
+        <h1>Wellcome to MOI Purchase Department<h1>
+
+    
+         {% block content %}
+<p> visits : {{ visits }} </p>
+        {% if user.is_authenticated %}
+         
+        <h1>Welcome : 
+ {{ user.username }} </h1>
+        <a href="/rango/logout/">Logout</a><br />
+        <h4><a href="/rango/add_category/">Add a new Category</a></h4><br />
+
+        {% if categories %}
+        <ul-class="list-group">
+
+             {% for category in categories %}
+              <li class="list-group-item">
+                <span class="badge">14</span>
+                <a href="/rango/category/{{ category.slug }}">{{ category.name }}</a>
+
+              </li>
+                 {% endfor %}
+        </ul>
+
+       {% else %}
+                  <strong>there is no category</strong>
+       {% endif %}
+
+ 
+
+        {% else %}
+         <h2> Goodbye</h2>
+
+        {% endif %}
+        
+        
+
+       <h4> <a href="/rango/register/"> Register here </a> <br />
+      <h4> <a href="/rango/login/"> login here </a>
+        {% endblock %}
+   </body>
+</html>
+
+
+
+

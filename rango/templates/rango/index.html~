@@ -1,0 +1,51 @@
+{% extends "raango/base.html" %}
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title>Rango Application</title>
+
+   <body>
+        <h1>Wellcome to MOI Purchase Department<h1>
+
+    
+         {% block content %}
+        {% if user.is_authenticated %}
+         <p> visits : {{ visits }} </p>
+        <h1> Hello Mr:]
+A {{ user.username }} </h1>
+        <a href="/rango/logout/">Logout</a><br />
+        <h4><a href="/rango/add_category/">Add a new Category</a></h4><br />
+
+        {% if categories %}
+        <ul>
+             {% for category in categories %}
+              <li><a href="/rango/category/{{ category.slug }}">{{ category.name }}</a></li>
+                 {% endfor %}
+        </ul>
+
+       {% else %}
+                  <strong>there is no category</strong>
+       {% endif %}
+
+ 
+
+        {% else %}
+         <h1> sorry Mr: {{ user.username }} </h1>
+
+        {% endif %}
+        
+        
+
+       <h4> <a href="/rango/register/"> Register here </a> <br />
+      <h4> <a href="/rango/login/"> login here </a>
+        {% endblock %}
+   </body>
+</html>
+
+
+
+

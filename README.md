@@ -1,2 +1,5 @@
 # qatar
-this is just a read read me file
+Hello aand welcome dear
+
+
+this file will be setup soon ..
